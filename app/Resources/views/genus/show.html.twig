@@ -3,11 +3,12 @@
 {% block title %}Genus {{ name }}{% endblock title %}
 
 {% block body %}
-<h1>The Genus {{ name }}</h1>
-
+<h1 class="center deep-purple-text lighten-3">The Genus {{ name }}</h1>
+<div class="container">
 <ul>
     {%  for note in notes %}
         <li>{{ note }}</li>
     {% endfor %}
 </ul>
+</div>
 {% endblock body %}
