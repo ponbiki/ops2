@@ -20,9 +20,13 @@ class GenusController extends Controller
      */
     public function showAction($genusName)
     {
+        $funFact = 'suck it *do things* suck it';
+
+        $funFact = $this->get('markdown.parser')->transform($funFact);
 
         return $this->render('genus/show.html.twig', [
-            'name' => $genusName
+            'name' => $genusName,
+            'funFact' => $funFact
         ]);
     }
 
